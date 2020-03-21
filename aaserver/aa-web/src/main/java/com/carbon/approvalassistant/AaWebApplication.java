@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApprovalAssistantApplication {
+public class AaWebApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ApprovalAssistantApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AaWebApplication.class, args);
+    }
 
 }

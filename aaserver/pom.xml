@@ -9,8 +9,14 @@
     </parent>
 
     <artifactId>aaserver</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>aaserver</name>
+
+    <modules>
+        <module>aa-web</module>
+        <module>aa-model</module>
+    </modules>
 
 
 </project>
