@@ -16,6 +16,8 @@
     <modules>
         <module>aa-web</module>
         <module>aa-model</module>
+        <module>aa-mapper</module>
+        <module>aa-service</module>
     </modules>
 
 

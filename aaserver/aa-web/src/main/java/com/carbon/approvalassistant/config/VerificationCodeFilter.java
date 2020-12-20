@@ -2,6 +2,8 @@ package com.carbon.approvalassistant.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.carbon.approvalassistant.model.RespBean;
+import org.aspectj.lang.annotation.Around;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -12,10 +14,10 @@ import java.io.PrintWriter;
 
 @Component
 public class VerificationCodeFilter extends GenericFilter {
+    String verificationCode;
 
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) servletRequest;
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
         if ("POST".equals(req.getMethod()) && "/doLogin".equals(req.getServletPath())) {
             //登录请求
