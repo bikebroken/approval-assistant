@@ -1,15 +1,10 @@
 package com.carbon.approvalassistant.controller;
 
-import com.carbon.approvalassistant.bean.User;
 import com.carbon.approvalassistant.bean.UserContext;
 import com.carbon.approvalassistant.config.VerificationCode;
-import com.carbon.approvalassistant.util.JwtUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
