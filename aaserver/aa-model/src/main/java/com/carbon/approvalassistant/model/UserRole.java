@@ -1,4 +1,4 @@
-package com.carbon.approvalassistant.entity;
+package com.carbon.approvalassistant.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
 package com.carbon.approvalassistant.bean;
 
-import com.carbon.approvalassistant.entity.User;
+import com.carbon.approvalassistant.model.User;
 import com.carbon.approvalassistant.validator.FullName;
 import lombok.AllArgsConstructor;
 import lombok.Data;

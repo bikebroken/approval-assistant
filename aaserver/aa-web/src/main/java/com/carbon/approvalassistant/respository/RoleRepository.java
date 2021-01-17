@@ -1,6 +1,6 @@
 package com.carbon.approvalassistant.respository;
 
-import com.carbon.approvalassistant.entity.Role;
+import com.carbon.approvalassistant.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,9 @@
 package com.carbon.approvalassistant;
 
-import com.carbon.approvalassistant.entity.Role;
-import com.carbon.approvalassistant.entity.User;
-import com.carbon.approvalassistant.entity.UserRole;
+import com.carbon.approvalassistant.model.Role;
+import com.carbon.approvalassistant.model.User;
+import com.carbon.approvalassistant.model.UserRole;
 import com.carbon.approvalassistant.enums.RoleType;
-import com.carbon.approvalassistant.interceptor.LoginInterceptor;
 import com.carbon.approvalassistant.respository.RoleRepository;
 import com.carbon.approvalassistant.respository.UserRepository;
 import com.carbon.approvalassistant.respository.UserRoleRepository;
@@ -14,7 +13,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
@@ -31,15 +30,13 @@ public class AaWebApplication implements WebMvcConfigurer, CommandLineRunner {
     @Autowired
     private UserRoleRepository userRoleRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public static void main(String[] args) {
         log.info("Starting Approval Assistant... ");
         SpringApplication springApplication = new SpringApplication(AaWebApplication.class);
         springApplication.run(args);
-    }
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginInterceptor());
     }
 
     @Override
@@ -49,7 +46,7 @@ public class AaWebApplication implements WebMvcConfigurer, CommandLineRunner {
             roleRepository.save(new Role(roleType.getName(), roleType.getDescription()));
         }
         // 初始化一个admin角色
-        User user = User.builder().fullName("admin").userName("root").password("123654").build();
+        User user = User.builder().fullName("admin").userName("root").password(passwordEncoder.encode("123654")).build();
         userRepository.save(user);
         Role role = roleRepository.findByName(RoleType.ADMIN.getName()).get();
         userRoleRepository.save(new UserRole(user, role));

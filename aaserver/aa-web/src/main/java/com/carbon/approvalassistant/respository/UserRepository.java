@@ -1,6 +1,6 @@
 package com.carbon.approvalassistant.respository;
 
-import com.carbon.approvalassistant.entity.User;
+import com.carbon.approvalassistant.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.transaction.annotation.Transactional;

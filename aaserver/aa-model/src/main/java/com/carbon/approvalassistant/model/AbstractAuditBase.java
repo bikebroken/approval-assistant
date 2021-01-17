@@ -1,4 +1,4 @@
-package com.carbon.approvalassistant.entity;
+package com.carbon.approvalassistant.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
