@@ -1,9 +1,7 @@
 package com.carbon.approvalassistant.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.carbon.approvalassistant.model.RespBean;
-import org.aspectj.lang.annotation.Around;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.carbon.approvalassistant.bean.RespBean;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;

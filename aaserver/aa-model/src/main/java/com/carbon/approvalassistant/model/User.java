@@ -1,5 +1,6 @@
 package com.carbon.approvalassistant.model;
 
+import com.carbon.approvalassistant.bean.UserRepresentation;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,7 +1,7 @@
 package com.carbon.approvalassistant.controller;
 
 import com.carbon.approvalassistant.bean.UserRegisterRequest;
-import com.carbon.approvalassistant.config.VerificationCode;
+import com.carbon.approvalassistant.bean.VerificationCode;
 import com.carbon.approvalassistant.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;

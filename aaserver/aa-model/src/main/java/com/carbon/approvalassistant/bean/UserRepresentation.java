@@ -1,4 +1,4 @@
-package com.carbon.approvalassistant.model;
+package com.carbon.approvalassistant.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

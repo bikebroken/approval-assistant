@@ -1,4 +1,4 @@
-package com.carbon.approvalassistant.config;
+package com.carbon.approvalassistant.bean;
 
 import org.springframework.stereotype.Component;
 

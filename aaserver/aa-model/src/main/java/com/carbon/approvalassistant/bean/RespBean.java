@@ -1,4 +1,4 @@
-package com.carbon.approvalassistant.model;
+package com.carbon.approvalassistant.bean;
 
 public class RespBean {
 

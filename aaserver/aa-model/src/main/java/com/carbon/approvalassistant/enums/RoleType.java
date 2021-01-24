@@ -4,10 +4,10 @@ import lombok.Getter;
 
 /**
  * @Author carbon
- * @Date 2020/12/22 下午10:18
+ * @Date 2021-01-24 22:56
  */
 @Getter
-public enum RoleType {
+public enum  RoleType {
     USER("USER", "用户"),
     TEMP_USER("TEMP_USER", "临时用户"),
     MANAGER("MANAGER", "管理者"),
