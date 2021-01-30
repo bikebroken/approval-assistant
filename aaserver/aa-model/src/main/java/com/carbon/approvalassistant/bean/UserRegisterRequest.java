@@ -22,12 +22,12 @@ public class UserRegisterRequest {
     private String password;
     @FullName
     @NotBlank
-    private String fullName;
+    private String nickName;
 
     public User toUser() {
-        return User.builder().fullName(this.getFullName())
+        return User.builder().nickName(this.getNickName())
                 .userName(this.userName)
-                .enabled(true).build();
+                .status(true).build();
     }
 
 }

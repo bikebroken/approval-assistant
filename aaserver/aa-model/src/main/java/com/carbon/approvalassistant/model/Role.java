@@ -20,7 +20,7 @@ public class Role extends AbstractAuditBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String roleName;
     private String description;
 
     @OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
@@ -28,7 +28,7 @@ public class Role extends AbstractAuditBase {
     private List<UserRole> userRoles = new ArrayList<>();
 
     public Role(String name, String description) {
-        this.name = name;
+        this.roleName = name;
         this. description = description;
     }
 }

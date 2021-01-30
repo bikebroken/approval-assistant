@@ -35,19 +35,21 @@ public class User extends AbstractAuditBase {
     private Long id;
     @Column(nullable = false)
     private String userName;
-    @Column(nullable = false)
-    private String fullName;
+    private String nickName;
     @Column
     private String password;
     @Column(columnDefinition = "tinyint(1) default 1")
-    private Boolean enabled;
+    private Boolean status;
+    @Column(nullable = false)
+    private String phoneNumber;
+    private String email;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<UserRole> userRoles = new ArrayList<>();
 
     public UserRepresentation toUserRepresentation() {
-        return UserRepresentation.builder().fullName(this.fullName)
+        return UserRepresentation.builder().nickName(this.nickName)
                 .userName(this.userName).build();
     }
 
